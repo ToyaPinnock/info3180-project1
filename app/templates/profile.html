@@ -1,0 +1,27 @@
+{% extends 'base.html' %} {% block main %}
+
+<form method="post" action="{{ url_for('profile')}}" enctype="multipart/form-data">
+    {% include 'flash_message.html'%} {{form. csrf_token}}
+    <div>
+        {{form.firstname.label}} {{form.firstname}}
+    </div>
+    <div>
+        {{form.lastname.label}} {{form.lastname}}
+    </div>
+    <div>
+        {{form.email.label}} {{form.email}}
+    </div>
+    <div>
+        {{form.location.label}} {{form.location}}
+    </div>
+    <div>
+        {{form.biography.label}} {{form.biography}}
+    </div>
+    <div>
+        {{form.photo.label}} {{form.photo}}
+    </div>
+
+    <button type='submit' name='submit'> Submit</button>
+</form>
+
+{% endblock %}
