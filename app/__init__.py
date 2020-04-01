@@ -7,7 +7,7 @@ UPLOAD_FOLDER = './app/static/uploads'
 SECRET_KEY = 'ASsdfk@HYR567dgrh'
 
 app.config['SECRET_KEY'] = "LKDER2342MDwedWD"
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://flask-p1:passes123@localhost/flask-p1"
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://p1:securepass123@localhost/p1"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 
 db = SQLAlchemy(app)

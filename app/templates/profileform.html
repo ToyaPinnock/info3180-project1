@@ -1,0 +1,56 @@
+{% extends 'base.html' %} {% block main %}
+<br>
+<br>
+<br>
+<h1 id="head"> Add Profile</h1>
+<br>
+<div>
+    <div class="form">
+        <form method="post" action="{{ url_for('profileform')}}" enctype="multipart/form-data">
+            {% include 'flash_message.html'%} {{form. csrf_token}}
+            <div class="form-group">
+                <div id="label"> {{form.firstname.label}}</div>
+                <div class="form-control-plaintext">{{form.firstname}}</div>
+            </div>
+            <hr>
+            <div class="form-group">
+                <div id="label"> {{form.lastname.label}}</div>
+                <div class="form-control-plaintext">{{form.lastname}}</div>
+            </div>
+
+            <hr>
+            <div class="form-group">
+                <div id="label"> {{form.gender.label}}</div>
+                <div class="form-control-plaintext">{{form.gender}}</div>
+            </div>
+
+            <hr>
+            <div class="form-group">
+                <div id="label"> {{form.email.label}}</div>
+                <div class="form-control-plaintext" id="inputEmail">{{form.email}}</div>
+            </div>
+
+            <hr>
+            <div class="form-group">
+                <div id="label"> {{form.location.label}}</div>
+                <div class="form-control-plaintext">{{form.location}}</div>
+            </div>
+
+            <hr>
+            <div class="form-group">
+                <div id="label"> {{form.biography.label}}</div>
+                <div class="form-control-plaintext">{{form.biography}}</div>
+            </div>
+
+            <hr>
+            <div class="form-group">
+                <div id="label"> {{form.photo.label}}</div>
+                <div class="form-control-plaintext">{{form.photo}}</div>
+            </div>
+
+
+            <button id="btn1" type='submit' name='submit' class="btn btn-primary"> Submit</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

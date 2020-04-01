@@ -13,10 +13,10 @@ def home():
     return render_template('home.html')
 
 @app.route('/profile', methods=['GET','POST'])
-def profile():
+def profileform():
     form=UserForm()
     date_joined= datetime.datetime.now()
-    #date_created= date_joined.strftime('%B,%Y')
+    date_created= date_joined.strftime('%B %d,%Y')
     if request.method== 'POST':
         if form.validate_on_submit():
             #upload image
@@ -29,33 +29,30 @@ def profile():
             email=form.email.data
             bio=form.biography.data
             location= form.location.data
+            gender= form.gender.data
             # add data to database
-            user=UserProfile(firstname= fname,lastname=lname,email=email,location=location,date_joined= date_joined,biography=bio)
+            user=UserProfile(firstname= fname,lastname=lname,email=email, gender= gender,location=location,date_joined= date_created,biography=bio,filename=filename)
             db.session.add(user)
             db.session.commit()
 
             flash('You have sucessfully created a profile')
-            return render_template('profiles.html',filename=filename)
+            return redirect(url_for('profiles'))
         flash_errors(form)
-    return render_template('profile.html',form=form)
+    return render_template('profileform.html',form=form)
+
+@app.route('/profiles')
+def profiles():
+    users= UserProfile.query.all()
+    return render_template('profiles.html',users=users)
 
 
+@app.route('/profile/<int:id>')
+def userid(id):
+    user= UserProfile.query.filter_by(id=id).first()
+    return render_template('user.html',user=user)
+# show the post with the given id, the id is an integer
+#'Post {}'.format(id)
 
-
-
-
-
-
-
-
-
-def flash_errors(form):
-    for field, errors in form.errors.items():
-        for error in errors:
-            flash(u"Error in the %s field - %s" % (
-                getattr(form, field).label.text,
-                error
-            ), 'danger')
 
 
 

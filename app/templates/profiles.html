@@ -1,6 +1,41 @@
 {% extends 'base.html' %} {% block main %} {% include 'flash_message.html'%}
+<br>
+<br>
+<br>
 <div>
-    <h1>List of Profiles</h1>
+    <h1 class="head">Profiles</h1>
+</div>
+<div id="message"> {%include 'flash_message.html' %}</div>
+<div class="contain">
+    {% for user in users %}
+    <br>
+    <br>
+    <div class="files">
+        <div class="file">
+            <div><img src="{{url_for('static', filename= 'uploads/' + user.filename ) }}" height="100" weight="100"></div>
+            <div id="content">
+                <div id="names">{{ user.firstname}} {{ user.lastname}}</div>
+                <div>{{user.gender}}</div>
+                <div>{{ user.location}}</div>
+
+            </div>
+        </div>
+
+
+        <div><a href="{{url_for('.userid', id=user.id)}}" id="alink">View Profile</a></div>
+
+
+    </div>
 
 </div>
+
+
+
+
+
+
+{% endfor %}
+
+</div>
+
 {% endblock %}

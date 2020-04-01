@@ -1,0 +1,30 @@
+{% extends 'base.html' %} {% block main %}
+<br>
+<br>
+<br>
+<div class="contains">
+    <div id="data">
+        <div><img id="img1" src="{{url_for('static', filename= 'uploads/' + user.filename ) }}"></div>
+
+        <div id="contents">
+            <div id="name">{{user.firstname}} {{user.lastname}}</div>
+            <div id="items">{{user.email}}</div>
+            <div id="items">{{user.location}}</div>
+            <div id="items">Joined on {{user.date_joined}}</div>
+        </div>
+    </div>
+    <br>
+    <h2>About Me</h2>
+    <br>
+    <div id="para">{{user.biography}}</div>
+    <br>
+    <div id="btn">
+        <div><button id="btn1">Send Message</button></div>
+
+        <div><button id="btn2">Follow</button></div>
+    </div>
+</div>
+
+
+
+{% endblock %}

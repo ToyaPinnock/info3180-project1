@@ -1,0 +1,157 @@
+#alink {
+    background-color: rgb(152, 211, 63);
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+.files {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 50%;
+    background-color: whitesmoke;
+    border-top: solid 2px;
+    border-top-color: rgb(42, 56, 252);
+    padding: 20px;
+}
+
+.contains {
+    margin: 0 auto;
+    width: 35%;
+    background-color: whitesmoke;
+    border-top: solid 2px;
+    border-top-color: rgb(42, 56, 252);
+    padding: 35px;
+}
+
+.file {
+    display: flex;
+}
+
+.form {
+    margin: 0 auto;
+    width: 40%;
+    background-color: whitesmoke;
+    border-top: solid 2px;
+    border-top-color: rgb(42, 56, 252);
+    padding: 35px;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 50px;
+}
+
+body {
+    background-color: rgb(188, 223, 240);
+}
+
+img {
+    border-radius: 20%;
+}
+
+#img1 {
+    width: 90%;
+    height: 90%;
+}
+
+#names {
+    font-weight: bold;
+    font-style: italic;
+}
+
+#name {
+    font-size: 25px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.head {
+    margin: 0 auto;
+    width: 50%;
+}
+
+#head {
+    margin: 0 auto;
+    width: 40%;
+}
+
+#message {
+    margin: 0 auto;
+    width: 50%;
+    font-weight: bold;
+    color: crimson;
+}
+
+#data {
+    display: flex;
+}
+
+#items {
+    font-size: 18px;
+    opacity: 0.5;
+}
+
+h2 {
+    font-size: 20px;
+    font-style: oblique;
+    font-weight: bold;
+}
+
+#para {
+    font-size: 18px;
+}
+
+#btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#btn1 {
+    background-color: rgb(152, 211, 63);
+    padding-left: 30px;
+    padding-right: 30px;
+    color: white;
+    border-radius: 10%;
+    font-size: 20px;
+}
+
+#btn2 {
+    background-color: blue;
+    padding-left: 50px;
+    padding-right: 50px;
+    color: white;
+    border-radius: 10%;
+    font-size: 20px;
+}
+
+#label {
+    font-weight: bold;
+    font-style: italic;
+}
+
+#input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
