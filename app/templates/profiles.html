@@ -12,7 +12,7 @@
     <br>
     <div class="files">
         <div class="file">
-            <div><img src="{{url_for('static', filename= 'uploads/' + filename ) }}" height="100" weight="100"></div>
+            <div><img src="{{url_for('static', filename= 'uploads/' + user.filename ) }}" height="100" weight="100"></div>
             <div id="content">
                 <div id="names">{{ user.firstname}} {{ user.lastname}}</div>
                 <div>{{user.gender}}</div>
